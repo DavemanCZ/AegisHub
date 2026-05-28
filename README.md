@@ -15,7 +15,7 @@ Aegis Hub is an open-source, zero-knowledge encrypted personal hub, password man
 - **Private E2EE Chat:** Real-time chat (channels and DMs) with forward secrecy using ECDH (Elliptic Curve Diffie-Hellman). Features inline image decrypt/preview and real-time message unsend.
 - **Integrated TOTP 2FA Authenticator:** A built-in authenticator tool to manage your two-factor tokens.
 - **PWA Ready:** Install Aegis Hub directly to your mobile device as a native app with push capabilities.
-- **Modern UI:** Built using a beautiful, responsive "Glassmorphism" design system.
+
 
 ### Quick Start (Docker)
 
@@ -51,7 +51,7 @@ To deploy Aegis Hub on your own server (e.g., VPS or Proxmox VM):
 - **Soukromý E2EE Chat:** Real-time komunikace s dopřednou bezpečností přes ECDH. Umožňuje inline zobrazení zašifrovaných médií, sdílení souborů a funkci "Unsend" (Smazání zprávy v reálném čase pro obě strany).
 - **Zabudovaný 2FA TOTP:** Integrovaný autentikátor pro generování dvoufázových hesel pro cizí platformy (náhrada za Google Auth).
 - **PWA Aplikace:** Možnost instalace rovnou na plochu telefonu jako nativní aplikace.
-- **Moderní vzhled:** Nádherný prémiový skleněný design (Glassmorphism).
+
 
 ### Rychlá instalace (Docker)
 
