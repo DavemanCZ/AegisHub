@@ -1,0 +1,23 @@
+www.aegishub.cz {
+    redir https://aegishub.cz{uri}
+}
+
+aegishub.cz {
+    handle /api/chat/sse* {
+        reverse_proxy http://backend:8080 {
+            flush_interval -1
+        }
+    }
+
+
+
+    handle /api/* {
+        reverse_proxy http://backend:8080
+    }
+
+    handle {
+        root * /usr/share/caddy
+        try_files {path} /index.html
+        file_server
+    }
+}

@@ -1,0 +1,62 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: aegis-db
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - aegis-net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aegis-backend
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - PORT=8080
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DATA_DIR=/data/files
+    volumes:
+      - aegis_files:/data/files
+    depends_on:
+      - db
+    networks:
+      - aegis-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: aegis-frontend
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - backend
+    networks:
+      - aegis-net
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  db_data:
+  caddy_data:
+  caddy_config:
+  aegis_files:
+
+networks:
+  aegis-net:
+    driver: bridge
+
+

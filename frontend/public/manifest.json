@@ -1,0 +1,17 @@
+{
+  "short_name": "Aegis",
+  "name": "Aegis Hub",
+  "description": "Secure, End-to-End Encrypted Platform",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#10b981"
+}
