@@ -7,7 +7,7 @@ Aegis Hub is an open-source, zero-knowledge encrypted personal hub, password man
 ---
 
 <a name="english"></a>
-## 🇬🇧 English
+##EN English
 
 ### Features
 - **End-to-End Encryption (E2EE):** All passwords, secure notes, bookmarks, and files are encrypted on the client side using AES-GCM-256 before ever reaching the server.
@@ -43,7 +43,7 @@ To deploy Aegis Hub on your own server (e.g., VPS or Proxmox VM):
 ---
 
 <a name="čeština"></a>
-## 🇨🇿 Čeština
+##CZ Čeština
 
 ### Funkce
 - **End-to-End Šifrování (E2EE):** Všechna hesla, poznámky, záložky a soubory jsou zašifrovány přímo u vás v prohlížeči (klientovi) pomocí AES-GCM-256 ještě předtím, než odejdou na server.
